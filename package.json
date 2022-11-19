@@ -19,8 +19,5 @@
     "concurrently": "^7.5.0",
     "dotenv": "^16.0.3"
   },
-  "engines": {
-    "node": "16.17.0"
-  },
   "private": true
 }

@@ -20,7 +20,7 @@
     "dotenv": "^16.0.3"
   },
   "engines": {
-    "node": "16.14.0"
+    "node": "16.17.0"
   },
   "private": true
 }

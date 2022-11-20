@@ -104,6 +104,7 @@ const SignUpForm = ({ status, processing }: Props) => {
 
   const handleBlur = (field: 'name' | 'email' | 'phone') => () => {
     if (!formData[field]) return;
+    if (validationStatus[field] && validationStatus[field]?.validated) return;
     validateField(field, formData[field]);
   };
 

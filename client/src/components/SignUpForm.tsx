@@ -135,45 +135,47 @@ const SignUpForm = ({ status, processing }: Props) => {
       onSubmit={handleSubmit}
       data-testid='signup-form'
     >
-      <h2 className='text-center tracking-wide text-xl'>Sign Up</h2>
-      <InputField
-        name='name'
-        type='text'
-        label='first name'
-        value={formData.name}
-        validation={validationStatus.name}
-        handleChange={handleChange('name')}
-        handleBlur={handleBlur('name')}
-        placeholder='e.g. Lassie'
-      />
+      <fieldset>
+        <legend className='tracking-wide text-xl'>Sign Up</legend>
+        <InputField
+          name='name'
+          type='text'
+          label='first name'
+          value={formData.name}
+          validation={validationStatus.name}
+          handleChange={handleChange('name')}
+          handleBlur={handleBlur('name')}
+          placeholder='e.g. Lassie'
+        />
 
-      <InputField
-        name='phone'
-        type='text'
-        label='phone number'
-        value={formData.phone}
-        validation={validationStatus.phone}
-        handleChange={handleChange('phone')}
-        handleBlur={handleBlur('phone')}
-        placeholder='e.g. 425 555 2676'
-      />
+        <InputField
+          name='phone'
+          type='text'
+          label='phone number'
+          value={formData.phone}
+          validation={validationStatus.phone}
+          handleChange={handleChange('phone')}
+          handleBlur={handleBlur('phone')}
+          placeholder='e.g. 425 555 2676'
+        />
 
-      <InputField
-        name='email'
-        type='email'
-        label='email address'
-        value={formData.email}
-        validation={validationStatus.email}
-        handleChange={handleChange('email')}
-        handleBlur={handleBlur('email')}
-        placeholder='e.g. lassie@gmail.com'
-      />
+        <InputField
+          name='email'
+          type='email'
+          label='email address'
+          value={formData.email}
+          validation={validationStatus.email}
+          handleChange={handleChange('email')}
+          handleBlur={handleBlur('email')}
+          placeholder='e.g. lassie@gmail.com'
+        />
 
-      <div className='flex space-x-2 mt-5'>
-        <Button type='reset' onClick={clearForm} label='Cancel' />
+        <div className='flex space-x-2 mt-5'>
+          <Button type='reset' onClick={clearForm} label='Cancel' />
 
-        <Button type='submit' label='Submit' disabled={canSubmit === false} />
-      </div>
+          <Button type='submit' label='Submit' disabled={canSubmit === false} />
+        </div>
+      </fieldset>
     </form>
   );
 };

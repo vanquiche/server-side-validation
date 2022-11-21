@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Walkie Buddy",
+  "name": "Server side validation",
   "icons": [
     {
       "src": "favicon.ico",

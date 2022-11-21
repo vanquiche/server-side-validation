@@ -16,7 +16,7 @@ A form with server-side validation and sanitization.
 - TypeScript
 - Tailwind CSS
 
-Check out the deployed app [here](walkie-buddy.onrender.com/)
+Check out the deployed app [here](https://walkie-buddy.onrender.com/)
 
 _Note: this app was deployed on Render's free tier and may take up to 30 seconds to start._
 

@@ -6,15 +6,15 @@ A form with server-side validation and sanitization.
 
 ### API
 
-Node.js
-Express
-TypeScript
+- Node.js
+- Express
+- TypeScript
 
 ### Client
 
-create-react-app
-TypeScript
-Tailwind CSS
+- create-react-app
+- TypeScript
+- Tailwind CSS
 
 Check out the deployed app [here](walkie-buddy.onrender.com/)
 

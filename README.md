@@ -42,4 +42,8 @@ npm install
 npm run dev
 ```
 
-4. Happy hacking in "http://localhost:3000"
+4. Happy hacking!
+
+```sh
+http://localhost:3000
+```

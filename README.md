@@ -22,6 +22,11 @@ _Note: this app was deployed on Render's free tier and may take up to 30 seconds
 - TypeScript
 - Tailwind CSS
 
+### Testing
+
+- React Testing Library
+- Cypress
+
 ## Local Installation
 
 1. Clone this repo to your local machine
@@ -30,10 +35,10 @@ _Note: this app was deployed on Render's free tier and may take up to 30 seconds
 git clone https://github.com/vanquiche/server-side-validation.git
 ```
 
-2. Install dependencies
+2. Navigate to folder and install dependencies
 
 ```sh
-npm install
+cd server-side-validation && npm install
 ```
 
 3. Start development server
@@ -42,8 +47,10 @@ npm install
 npm run dev
 ```
 
-4. Happy hacking!
+4. Navigate to port: 3000 in your browser
 
 ```sh
 http://localhost:3000
 ```
+
+Happy Hacking!

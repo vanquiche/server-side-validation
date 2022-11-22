@@ -17,7 +17,7 @@ const Splash = () => {
           ...font,
           ...fontColor,
         }}
-        className='text-4xl font-extrabold tracking-wide text-white block'
+        className='text-4xl font-extrabold tracking-wide text-white block z-10'
       >
         Need a walking buddy?
       </h1>

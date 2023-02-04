@@ -50,7 +50,9 @@ const InputField = ({
           placeholder={placeholder}
           data-testid={`textfield-input-${name}`}
           className={`px-2 py-2 mt-1 rounded-md bg-gray-50 focus:outline-${validationColor}-500`}
-          inputMode={name === 'phone' ? 'numeric' : 'text'}
+          inputMode={
+            name === 'phone' ? 'numeric' : name === 'email' ? 'email' : 'text'
+          }
         />
         {/* validation checkmark */}
         <ValidationStatus validation={validation} forInput={name} />

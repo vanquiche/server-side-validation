@@ -2,7 +2,7 @@
 
 A form with server-side validation and sanitization.
 
-Check out the deployed app [here](https://walkie-buddy.onrender.com/)
+Check out the deployed app [here](https://server-side-validation.vercel.app/)
 
 ![demo](https://res.cloudinary.com/dvrs8gsj3/image/upload/v1668926577/walkie-buddy/chrome-capture-2022-10-20_xcxjba.gif)
 

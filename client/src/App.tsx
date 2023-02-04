@@ -5,7 +5,6 @@ import Modal from './components/Modal';
 import SignUpForm from './components/SignUpForm';
 import '@fontsource/montserrat';
 import Logo from './components/Logo';
-import Splash from './components/Splash';
 
 function App() {
   const [isProcessing, setIsProcessing] = useState(false);
@@ -20,8 +19,7 @@ function App() {
     <main className='h-screen' style={bgColor}>
       <Modal dismiss={dismissModal} status={submitStatus} show={isProcessing} />
       <div className='flex h-full'>
-        <Splash />
-        <article className='w-full rounded-none bg-white grid place-content-center lg:rounded-l-3xl lg:w-1/2'>
+        <article className='w-full rounded-none bg-white grid place-content-center'>
           <Logo />
           <SignUpForm status={setSubmitStatus} processing={setIsProcessing} />
         </article>

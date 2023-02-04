@@ -1,7 +1,7 @@
 import ErrorMsg from './ErrorMsg';
 import { ChangeEvent, useMemo } from 'react';
 import ValidationStatus from './ValidationStatus';
-import { TouchObject } from 'src/types';
+import { TouchObject } from '@/components/types';
 
 interface Props {
   type: 'text' | 'number' | 'password' | 'email';

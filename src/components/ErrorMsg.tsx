@@ -1,4 +1,4 @@
-import { TouchObject } from 'src/types';
+import { TouchObject } from '@/components/types';
 
 interface Response {
   response: TouchObject | null;

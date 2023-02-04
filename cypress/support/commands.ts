@@ -45,3 +45,5 @@ Cypress.Commands.add('populateForm', (name, phone, email) => {
   cy.getByTestId('textfield-input-phone').type(phone);
   cy.getByTestId('textfield-input-email').type(email);
 });
+
+export {};

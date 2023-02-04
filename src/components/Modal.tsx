@@ -1,7 +1,6 @@
 import { SubmitResponse } from '@/types/api';
 import { createPortal } from 'react-dom';
-import Button from './Button';
-import SubmitStatus from './SubmitStatus';
+import AlertDialog from './AlertDialog';
 
 function createContainerRoot() {
   const container = document.createElement('div');
@@ -17,37 +16,21 @@ interface Props {
 }
 
 const Modal = ({ dismiss, status, show }: Props) => {
+  // if client has not rendered yet then do not run
   if (typeof window === 'undefined') return null;
-  let container =
+
+  // initialize container when client has rendered
+  const container =
     (typeof document !== 'undefined' &&
       document.getElementById('portal-root')) ||
     createContainerRoot();
 
-  const Dialog = () => (
-    <div
-      id='overlay'
-      className='grid place-content-center bg-gray-200/60 w-full h-full fixed z-50 backdrop-blur-sm'
-      data-testid='modal-overlay'
-    >
-      <div
-        id='dialog'
-        className='bg-neutral-50 w-84 min-w-fit h-fit py-10 px-12 rounded-xl flex-col space-y-5'
-        data-testid='modal-dialog'
-      >
-        <SubmitStatus status={status && status.submitted} />
-
-        <p data-testid='modal-message'>
-          {status ? status.message : 'Processing'}
-        </p>
-
-        <Button label='Close' onClick={dismiss} />
-      </div>
-    </div>
-  );
-
   if (!show) return null;
 
-  return createPortal(<Dialog />, container as HTMLDivElement);
+  return createPortal(
+    <AlertDialog dismiss={dismiss} status={status} show={show} />,
+    container as HTMLDivElement
+  );
 };
 
 export default Modal;

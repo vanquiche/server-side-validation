@@ -20,7 +20,7 @@ const Modal = ({ dismiss, status, show }: Props) => {
   if (typeof window === 'undefined') return null;
 
   // initialize container when client has rendered
-  const container =
+  const root =
     (typeof document !== 'undefined' &&
       document.getElementById('portal-root')) ||
     createContainerRoot();
@@ -29,7 +29,7 @@ const Modal = ({ dismiss, status, show }: Props) => {
 
   return createPortal(
     <AlertDialog dismiss={dismiss} status={status} show={show} />,
-    container as HTMLDivElement
+    root as HTMLDivElement
   );
 };
 

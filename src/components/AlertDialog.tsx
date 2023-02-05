@@ -22,7 +22,7 @@ const AlertDialog = ({ status, dismiss, show }: Props) => {
     >
       <div
         id='dialog'
-        className='bg-neutral-50 w-84 min-w-fit h-fit py-10 px-12 rounded-xl flex-col space-y-5'
+        className='bg-neutral-50 w-80 h-fit py-10 px-12 rounded-xl flex-col space-y-5 focus:outline-none'
         data-testid='modal-dialog'
         role='alertdialog'
         aria-modal='true'
@@ -32,7 +32,11 @@ const AlertDialog = ({ status, dismiss, show }: Props) => {
       >
         <SubmitStatus status={status && status.submitted} />
 
-        <p data-testid='modal-message' id='dialog_label'>
+        <p
+          data-testid='modal-message'
+          id='dialog_label'
+          className='text-center'
+        >
           {status ? status.message : 'Processing'}
         </p>
 

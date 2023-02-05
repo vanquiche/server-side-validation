@@ -11,6 +11,7 @@ export default function Home() {
   const bgColor = { backgroundColor: '#fcd6e8' };
 
   function dismissModal() {
+    setSubmitStatus(null);
     setIsProcessing(false);
   }
   return (

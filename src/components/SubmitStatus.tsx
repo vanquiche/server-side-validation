@@ -12,14 +12,7 @@ const SubmitStatus = ({ status }: Props) => {
   const iconSize = 48;
   return (
     <span className='grid place-content-center'>
-      {status === null ? (
-        <AiOutlineLoading3Quarters
-          className='animate-spin'
-          size={iconSize}
-          color='blue'
-          data-testid='status-loading'
-        />
-      ) : status === false ? (
+      {status === false ? (
         <AiFillCloseCircle
           size={iconSize}
           color='red'
@@ -32,7 +25,14 @@ const SubmitStatus = ({ status }: Props) => {
           color='green'
           data-testid='status-valid'
         />
-      ) : null}
+      ) : (
+        <AiOutlineLoading3Quarters
+          className='animate-spin'
+          size={iconSize}
+          color='blue'
+          data-testid='status-loading'
+        />
+      )}
     </span>
   );
 };
